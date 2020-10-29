@@ -6,12 +6,12 @@ require 'logger'
 
 class MercadoPagoTest < Test::Unit::TestCase
 	def setup
-		@mp = MercadoPago.new("CLIENT_ID", "CLIENT_SECRET")
+		@mp = MercadoPagoApi.new("CLIENT_ID", "CLIENT_SECRET")
 	end
 
 	# Call preference added through button flow
 	def test_long_live_access_token
-		@mp = MercadoPago.new("LONG_LIVE_ACCESS_TOKEN")
+		@mp = MercadoPagoApi.new("LONG_LIVE_ACCESS_TOKEN")
 
 		assert_equal(@mp.get_access_token(), "LONG_LIVE_ACCESS_TOKEN")
 	end

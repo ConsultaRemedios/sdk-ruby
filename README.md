@@ -27,7 +27,7 @@ That's it! Mercado Pago SDK has been successfully installed.
 ```ruby
 require 'mercadopago.rb'
 
-$mp = MercadoPago.new('YOUR_ACCESS_TOKEN')
+$mp = MercadoPagoApi.new('YOUR_ACCESS_TOKEN')
 
 preference_data = {
 	"items": [

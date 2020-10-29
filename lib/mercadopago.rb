@@ -12,7 +12,7 @@ require 'yaml'
 require File.dirname(__FILE__) + '/version'
 require 'ssl_options_patch'
 
-class MercadoPago
+class MercadoPagoApi
 	def initialize(*args)
 		if args.size < 1 or args.size > 2
 			raise "Invalid arguments. Use CLIENT_ID and CLIENT SECRET, or ACCESS_TOKEN"

@@ -6,7 +6,7 @@ require 'mercadopago.rb'
 class Button
 	
   def call(env)
-	mp = MercadoPago.new('CLIENT_ID', 'CLIENT_SECRET')
+	mp = MercadoPagoApi.new('CLIENT_ID', 'CLIENT_SECRET')
 	preapprovalPayment_data = Hash[
 		"payer_email" => "my_customer@my_site.com",
 	    "back_url" => "http://www.my_site.com",

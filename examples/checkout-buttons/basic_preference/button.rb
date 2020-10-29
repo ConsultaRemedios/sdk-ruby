@@ -6,7 +6,7 @@ require 'mercadopago.rb'
 class Button
 	
   def call(env)
-	mp = MercadoPago.new('CLIENT_ID', 'CLIENT_SECRET')
+	mp = MercadoPagoApi.new('CLIENT_ID', 'CLIENT_SECRET')
 	preferenceData = {"items" => ["title"=>"testCreate", "quantity"=>1, "unit_price"=>10.2, "currency_id"=>"ARS"]}
 	preference = mp.create_preference(preferenceData)
 	

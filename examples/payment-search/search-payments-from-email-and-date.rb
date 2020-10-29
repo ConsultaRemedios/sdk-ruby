@@ -5,7 +5,7 @@ require 'mercadopago.rb'
 
 class IPN
   def call(env)
-	mp = MercadoPago.new('CLIENT_ID', 'CLIENT_SECRET')
+	mp = MercadoPagoApi.new('CLIENT_ID', 'CLIENT_SECRET')
 	
 	# Sets the filters you want
 	filters = Hash["payer.email" => "mail02@mail02.com", "begin_date"=>"2011-01-01T00:00:00Z", "end_date"=>"2011-02-01T00:00:00Z"]

@@ -5,7 +5,7 @@ require 'mercadopago.rb'
 
 class IPN
   def call(env)
-	mp = MercadoPago.new('CLIENT_ID', 'CLIENT_SECRET')
+	mp = MercadoPagoApi.new('CLIENT_ID', 'CLIENT_SECRET')
 	
 	# Sets the filters you want
 	filters = Hash["installments" => 12, "description"=>"product_name", "operation_type"=>"regular_payment"]
